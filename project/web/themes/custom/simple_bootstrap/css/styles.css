@@ -60,3 +60,11 @@ a {
   top: 70%;
   border: 1px solid #07977D;
 }
+
+.block-page-title-block {
+  background: #07977D;
+  padding: 50px;
+  margin-bottom: 30px;
+  border-bottom-right-radius: 100px;
+  color: white;
+}

@@ -68,21 +68,21 @@
   <main role="main" class="row">
     <a id="main-content" tabindex="-1"></a>{# link is in html.html.twig #}
 
-    <div class="layout-content col-md-8 order-2">
+    <div class="layout-content col-md-12 order-2">
       {{ page.content }}
     </div>{# /.layout-content #}
 
-    {% if page.sidebar_first %}
+    {# {% if page.sidebar_first %}
       <aside class="layout-sidebar-first col-md-2 order-1" role="complementary">
         {{ page.sidebar_first }}
       </aside>
-    {% endif %}
+    {% endif %} #}
 
-    {% if page.sidebar_second %}
+    {# {% if page.sidebar_second %}
       <aside class="layout-sidebar-second col-md-2 order-3" role="complementary">
         {{ page.sidebar_second }}
       </aside>
-    {% endif %}
+    {% endif %} #}
 
   </main>
 
