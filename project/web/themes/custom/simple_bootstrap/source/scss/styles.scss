@@ -1,7 +1,9 @@
+@import "colors";
+ 
 html {
   font-size: 16px;
   line-height: 26px;
-  color: #343338;
+  color: $textColor;
 }
 
 h1 {
@@ -16,5 +18,5 @@ h1 {
 }
 
 a {
-  color: #07977D;
+  color: $primary;
 }
