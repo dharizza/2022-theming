@@ -18,3 +18,45 @@ h1 {
 a {
   color: #07977D;
 }
+
+.site-logo img {
+  height: 80px;
+}
+
+.menu--account li.nav-item:last-child {
+  background: #07977D;
+}
+
+.menu--account li.nav-item:last-child a {
+  color: white;
+}
+
+#navbarNav {
+  height: 80px;
+}
+
+.region-secondary-menu, .region-primary-menu, .navbar-nav,
+.region-primary-menu nav, .region-secondary-menu nav {
+  height: 100%;
+}
+
+.region-primary-menu nav li a,
+.region-secondary-menu nav li a {
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.menu a {
+  position: relative;
+  text-decoration: none;
+}
+
+.menu a:hover::after {
+  content: "";
+  position: absolute;
+  left: 7%;
+  right: 7%;
+  top: 70%;
+  border: 1px solid #07977D;
+}
