@@ -7,3 +7,4 @@ vendor
 web/modules/contrib
 web/core
 web/libraries
+node_modules
