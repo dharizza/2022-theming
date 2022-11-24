@@ -1,0 +1,14 @@
+<?php
+
+/**
+ * @file
+ * 
+ * Theme functions for Simple Bootstrap.
+ */
+
+ /**
+  * Preprocess function for page_title.
+  */
+function simple_bootstrap_preprocess_page_title(&$variables) {
+    $variables['pretitle'] = 'ARTICLES';
+}
