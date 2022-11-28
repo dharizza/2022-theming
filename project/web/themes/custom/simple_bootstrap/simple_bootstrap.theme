@@ -39,7 +39,6 @@ function simple_bootstrap_theme_suggestions_user_alter(array &$suggestions, arra
   $suggestions[] = 'user__' . $variables['elements']['#user']->uid->value;
 
   $roles = $variables['elements']['#user']->getRoles();
-  ksm($roles);
   foreach ($roles as $role) {
     $suggestions[] = 'user__role__' . $role;
   }
