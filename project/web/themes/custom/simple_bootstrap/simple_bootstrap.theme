@@ -3,17 +3,12 @@
 /**
  * @file
  * 
- * Theme functions for Simple Boostrap.
+ * Theme functions for Simple Bootstrap.
  */
 
-/**
- * Preprocess function for page_title.
- */
+ /**
+  * Preprocess function for page_title.
+  */
 function simple_bootstrap_preprocess_page_title(&$variables) {
-    $node = \Drupal::routeMatch()->getParameter('node');
-    if ($node) {
-        if ($node->getType() === 'article') {
-            $variables['pretitle'] = t("ARTICLES");
-        }
-    }
+    $variables['pretitle'] = 'ARTICLES';
 }

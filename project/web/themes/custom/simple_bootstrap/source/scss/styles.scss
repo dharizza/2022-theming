@@ -1,7 +1,9 @@
+@import "colors";
+
 html {
   font-size: 16px;
   line-height: 26px;
-  color: #343338;
+  color: $textColor;
 }
 
 h1 {
@@ -16,7 +18,7 @@ h1 {
 }
 
 a {
-  color: #07977D;
+  color: $primary;
 }
 
 .site-logo img {
@@ -24,7 +26,7 @@ a {
 }
 
 .menu--account li.nav-item:last-child {
-  background: #07977D;
+  background: $primary;
 }
 
 .menu--account li.nav-item:last-child a {
@@ -58,11 +60,11 @@ a {
   left: 7%;
   right: 7%;
   top: 70%;
-  border: 1px solid #07977D;
+  border: 1px solid $primary;
 }
 
 .block-page-title-block {
-  background: #07977D;
+  background: $primary;
   padding: 50px;
   margin-bottom: 30px;
   border-bottom-right-radius: 100px;
