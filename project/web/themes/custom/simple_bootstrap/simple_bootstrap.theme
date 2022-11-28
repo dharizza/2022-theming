@@ -10,5 +10,36 @@
   * Preprocess function for page_title.
   */
 function simple_bootstrap_preprocess_page_title(&$variables) {
-    $variables['pretitle'] = 'ARTICLES';
+  $route = \Drupal::routeMatch();
+  $node = $route->getParameter('node');
+
+  if ($node) {
+    if ($node->getType() == "article") {
+      $variables['pretitle'] = t("Articles");
+    }
+    if ($node->getType() == "page") {
+      $variables['pretitle'] = $node->field_pretitle->value;
+    }
+  }
+}
+
+/**
+ * Implement hook_theme_suggestions_HOOK_alter.
+ */
+function simple_bootstrap_theme_suggestions_page_alter(array &$suggestions, array $variables) {
+  if ($node = \Drupal::routeMatch()->getParameter('node')) {
+    $suggestions[] = 'page__node_type__' . $node->getType();
+  }
+}
+
+/**
+ * Implement hook_theme_suggestions_HOOK_alter.
+ */
+function simple_bootstrap_theme_suggestions_user_alter(array &$suggestions, array $variables) {
+  $suggestions[] = 'user__' . $variables['elements']['#user']->uid->value;
+
+  $roles = $variables['elements']['#user']->getRoles();
+  foreach ($roles as $role) {
+    $suggestions[] = 'user__role__' . $role;
+  }
 }
