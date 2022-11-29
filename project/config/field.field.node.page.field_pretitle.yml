@@ -1,0 +1,19 @@
+uuid: cfbc0cb2-449b-4187-99d9-1196e50978a3
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_pretitle
+    - node.type.page
+id: node.page.field_pretitle
+field_name: field_pretitle
+entity_type: node
+bundle: page
+label: Pretitle
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string
