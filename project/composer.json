@@ -21,6 +21,7 @@
         "drupal/core-project-message": "^9.4",
         "drupal/core-recommended": "^9.4",
         "drupal/devel": "^5.0",
+        "drupal/paragraphs": "^1.15",
         "drush/drush": "^10"
     },
     "conflict": {
@@ -41,6 +42,9 @@
         "drupal-scaffold": {
             "locations": {
                 "web-root": "web/"
+            },
+            "file-mapping": {
+                "[web-root]/sites/development.services.yml": false
             }
         },
         "installer-paths": {

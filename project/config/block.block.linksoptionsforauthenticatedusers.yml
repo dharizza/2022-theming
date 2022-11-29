@@ -1,0 +1,25 @@
+uuid: 0ea69e38-654b-4a2d-a31b-f32ddbe9acc5
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:b138c464-457f-4396-8a57-fadbe1c878d7'
+  module:
+    - block_content
+  theme:
+    - simple_bootstrap
+id: linksoptionsforauthenticatedusers
+theme: simple_bootstrap
+region: sidebar_second
+weight: 0
+provider: null
+plugin: 'block_content:b138c464-457f-4396-8a57-fadbe1c878d7'
+settings:
+  id: 'block_content:b138c464-457f-4396-8a57-fadbe1c878d7'
+  label: 'Links options for authenticated users'
+  label_display: visible
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }
