@@ -1,0 +1,12 @@
+.paragraph--type--banner {
+    display: flex;
+    height: 600px;
+    align-items: center;
+
+    .field--name-field-text {
+        color: white;
+        font-size: 60px;
+        padding: 3rem;
+        width: 70%;
+    }
+}
