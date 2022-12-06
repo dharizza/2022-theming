@@ -78,6 +78,11 @@
   ]
 %}
 {{ attach_library('classy/node') }}
+
+{% if not node.isPublished() %}
+  {{ attach_library('simple_bootstrap/red') }}
+{% endif %}
+
 <article{{ attributes.addClass(classes) }}>
   {{ title_prefix }}
   {% if label and not page %}
