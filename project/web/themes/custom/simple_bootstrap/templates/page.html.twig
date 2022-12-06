@@ -44,20 +44,11 @@
 #}
 <div class="layout-container">
 
-  <header role="banner">
-    <nav class="navbar navbar-expand-lg bg-light p-0">
-      <div class="container-fluid p-0 d-flex align-items-stretch">
-        {{ page.header }}
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse d-flex justify-content-md-end" id="navbarSupportedContent">
-          {{ page.primary_menu }}
-          {{ page.secondary_menu }}
-        </div>
-      </div>
-    </nav>
-  </header>
+  {% include '@simple_bootstrap/includes/header.html.twig' with {
+    header: page.header,
+    primary_menu: page.primary_menu,
+    secondary_menu: page.secondary_menu
+  } %}
 
   {{ page.breadcrumb }}
 
@@ -68,21 +59,27 @@
   <main role="main" class="row">
     <a id="main-content" tabindex="-1"></a>{# link is in html.html.twig #}
 
-    <div class="layout-content col-md-12 order-2">
+    {% block main_content %}
+    <div class="layout-content col-md-8 order-2">
       {{ page.content }}
     </div>{# /.layout-content #}
+    {% endblock %}
 
-    {# {% if page.sidebar_first %}
+    {% block sidebarfirst %}
+    {% if page.sidebar_first %}
       <aside class="layout-sidebar-first col-md-2 order-1" role="complementary">
         {{ page.sidebar_first }}
       </aside>
-    {% endif %} #}
+    {% endif %}
+    {% endblock %}
 
-    {# {% if page.sidebar_second %}
+    {% block sidebarsecond %}
+    {% if page.sidebar_second %}
       <aside class="layout-sidebar-second col-md-2 order-3" role="complementary">
         {{ page.sidebar_second }}
       </aside>
-    {% endif %} #}
+    {% endif %}
+    {% endblock %}
 
   </main>
 
