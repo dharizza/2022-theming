@@ -20,3 +20,11 @@ red:
   css:
     theme:
       dist/red.css: {}
+
+font-awesome:
+  css:
+    theme:
+      https://kit.fontawesome.com/a8a51fc5b6.js:
+        type: external
+        minified: true
+        crossorigin: anonymous
