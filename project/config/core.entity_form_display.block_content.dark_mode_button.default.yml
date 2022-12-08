@@ -1,0 +1,42 @@
+uuid: 32481d93-3b9b-44e5-a9fd-46bbc3e3c7c0
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.dark_mode_button
+    - field.field.block_content.dark_mode_button.body
+    - field.field.block_content.dark_mode_button.field_button_title
+  module:
+    - text
+id: block_content.dark_mode_button.default
+targetEntityType: block_content
+bundle: dark_mode_button
+mode: default
+content:
+  body:
+    type: text_textarea_with_summary
+    weight: 26
+    region: content
+    settings:
+      rows: 9
+      summary_rows: 3
+      placeholder: ''
+      show_summary: false
+    third_party_settings: {  }
+  field_button_title:
+    type: string_textfield
+    weight: 27
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  info:
+    type: string_textfield
+    weight: -5
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden: {  }
