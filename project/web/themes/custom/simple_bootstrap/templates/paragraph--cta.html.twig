@@ -55,10 +55,11 @@
         paragraph.field_link.0.value.uri, 
         {'class': [
           'btn',
-          paragraph.field_button_style.value|clean_class
+          paragraph.field_button_style.value|clean_class,
+          paragraph.field_button_style.value == 'button--arrow' ? 'fa-solid fa-arrow-right',
         ]}
       ) }}
-      <i class="fa-solid fa-arrow-right"></i>
+      {# <i class="fa-solid fa-arrow-right"></i> #}
     {% endblock %}
   </div>
 {% endblock paragraph %}

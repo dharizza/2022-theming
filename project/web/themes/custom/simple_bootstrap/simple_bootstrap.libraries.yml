@@ -24,7 +24,6 @@ red:
 font-awesome:
   css:
     theme:
-      https://kit.fontawesome.com/a8a51fc5b6.js:
+      https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css:
         type: external
         minified: true
-        crossorigin: anonymous
