@@ -42,7 +42,8 @@
     {% else %}
       <ul class="menu navbar-nav me-auto mb-2 mb-lg-0">
     {% endif %}
-    {% for item in items %}
+
+    {% for id, item in items %}
       {%
         set classes = [
           'menu-item',
@@ -53,7 +54,17 @@
         ]
       %}
       <li{{ item.attributes.addClass(classes) }}>
-        {{ link(item.title, item.url, {'class':['nav-link']}) }}
+        {{ link(
+          item.title,
+          item.url, 
+          {'class':[
+            'nav-link',
+            id == 'user.logout' ? 'fa-solid fa-user',
+          ]}
+        ) }}
+        {# {% if loop.last %}
+          <i class="fa-solid fa-user"></i>
+        {% endif %} #}
         {% if item.below %}
           {{ menus.menu_links(item.below, attributes, menu_level + 1) }}
         {% endif %}

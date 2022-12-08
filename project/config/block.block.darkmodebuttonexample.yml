@@ -1,0 +1,25 @@
+uuid: fe87046e-fa8b-466b-bee9-7ecffce3e86a
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:dark_mode_button:a3465731-dbd2-4fd7-bc32-2afab8a6b2c1'
+  module:
+    - block_content
+  theme:
+    - simple_bootstrap
+id: darkmodebuttonexample
+theme: simple_bootstrap
+region: primary_menu
+weight: 0
+provider: null
+plugin: 'block_content:a3465731-dbd2-4fd7-bc32-2afab8a6b2c1'
+settings:
+  id: 'block_content:a3465731-dbd2-4fd7-bc32-2afab8a6b2c1'
+  label: 'Dark mode button example'
+  label_display: '0'
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

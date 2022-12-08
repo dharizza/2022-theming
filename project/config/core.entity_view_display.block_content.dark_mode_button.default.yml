@@ -1,0 +1,31 @@
+uuid: 428a337c-5285-4eb9-8f00-9e2a84b81995
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.dark_mode_button
+    - field.field.block_content.dark_mode_button.body
+    - field.field.block_content.dark_mode_button.field_button_title
+  module:
+    - text
+id: block_content.dark_mode_button.default
+targetEntityType: block_content
+bundle: dark_mode_button
+mode: default
+content:
+  body:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_button_title:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 1
+    region: content
+hidden: {  }

@@ -1,0 +1,8 @@
+uuid: 6b07bd67-4ddf-41c7-be2d-874969946c28
+langcode: en
+status: true
+dependencies: {  }
+id: dark_mode_button
+label: 'Dark mode button'
+revision: 0
+description: ''

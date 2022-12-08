@@ -1,0 +1,1 @@
+{"version":3,"sources":["dark_mode.scss","dark_mode.css"],"names":[],"mappings":"AAAA,UACI,wBAAA,CACA,UCCJ","file":"dark_mode.css","sourcesContent":["body.dark {\n    background-color: #191919;\n    color: white;\n}","body.dark {\n  background-color: #191919;\n  color: white;\n}"]}
