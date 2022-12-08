@@ -52,8 +52,10 @@
 {% block paragraph %}
   <div{{ attributes.addClass(classes).setAttribute("style", "background:url(" ~ image_url ~ ");") }}>
     {% block content %}
-      {{ content.field_text }}
-      {{ content.field_button }}
+      <div class="text-container">
+        {{ content.field_text }}
+        {{ content.field_button }}
+      </div>
     {% endblock %}
   </div>
 {% endblock paragraph %}
