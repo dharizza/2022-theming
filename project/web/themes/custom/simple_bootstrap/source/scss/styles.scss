@@ -6,6 +6,7 @@ html {
   font-size: 16px;
   line-height: 26px;
   color: $textColor;
+  font-family: muli, sans-serif;
 }
 
 h1 {
@@ -39,13 +40,20 @@ a {
   height: 80px;
 }
 
-.region-secondary-menu, .region-primary-menu, .navbar-nav,
-.region-primary-menu nav, .region-secondary-menu nav {
-  height: 100%;
+@media screen and (min-width: 678px) {
+  .region-primary-menu {
+    display: flex;
+  }
+
+  .region-secondary-menu, .region-primary-menu, .navbar-nav,
+  .region-primary-menu nav, .region-secondary-menu nav {
+    height: 100%;
+  }
 }
 
-.region-primary-menu nav li a,
-.region-secondary-menu nav li a {
+
+.region-primary-menu .navbar-nav li a,
+.region-secondary-menu .navbar-nav li a {
   height: 100%;
   display: flex;
   align-items: center;

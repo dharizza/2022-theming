@@ -1,2 +1,2 @@
-body.dark{background-color:#191919;color:#fff}
+.dark-mode:hover{color:purple!important;cursor:pointer}body.dark{background-color:#191919}body.dark,body.dark .button--arrow{color:#fff}body.dark header .navbar.bg-light{background-color:#191919!important}body.dark header .navbar .navbar-nav .nav-link{color:#fff}body.dark footer{background-color:#fff;color:#191919}
 /*# sourceMappingURL=dark_mode.css.map */

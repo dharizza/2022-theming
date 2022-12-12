@@ -53,13 +53,18 @@
           'nav-item',
         ]
       %}
+      {% set link_content %}
+        {% if id == 'user.logout'%}
+          <i class="fa-solid fa-user me-1"></i>
+        {% endif %}
+        {{ item.title }}
+      {% endset %}
       <li{{ item.attributes.addClass(classes) }}>
         {{ link(
-          item.title,
+          link_content,
           item.url, 
           {'class':[
             'nav-link',
-            id == 'user.logout' ? 'fa-solid fa-user',
           ]}
         ) }}
         {# {% if loop.last %}

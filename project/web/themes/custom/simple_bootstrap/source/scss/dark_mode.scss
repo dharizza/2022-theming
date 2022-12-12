@@ -1,4 +1,35 @@
+@import "colors";
+
+.dark-mode {
+    &:hover {
+        color: purple!important;
+        cursor: pointer;
+    }
+}
+
 body.dark {
-    background-color: #191919;
+    background-color: $darkPrimary;
     color: white;
+
+    .button--arrow {
+        color: $white;
+    }
+
+    header {
+        .navbar {
+            &.bg-light {
+                background-color: $darkPrimary !important;
+            }
+            .navbar-nav {
+                .nav-link {
+                    color: $white;
+                }
+            }
+        }
+    }
+
+    footer {
+        background-color: $white;
+        color: $darkPrimary;
+    }
 }
