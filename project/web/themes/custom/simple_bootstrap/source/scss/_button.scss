@@ -2,4 +2,15 @@
     background-color: $primary;
     color: $white;
     text-transform: uppercase;
+
+    &:hover {
+        color: $primary;
+        background-color: $white;
+    }
+}
+
+.button--arrow {
+    i {
+        color: $primary;
+    }
 }
