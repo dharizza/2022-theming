@@ -56,3 +56,33 @@ function simple_bootstrap_preprocess_block(&$variables) {
     }
   }
 }
+
+/**
+ * Adding custom theme settings.
+ */
+function simple_bootstrap_form_system_theme_settings_alter(&$form, \Drupal\Core\Form\FormStateInterface $form_state) {
+  $form['contact_info'] = [
+    '#type' => 'details',
+    '#title' => t('Contact Information'),
+    '#open' => TRUE,
+  ];
+
+
+  $phone = theme_get_setting('phone');
+  $form['contact_info']['phone'] = [
+    '#type' => 'tel',
+    '#title' => t('Phone'),
+    '#description' => t('Enter the phone number using the format 1234-5678.'),
+    '#placeholder' => '1234-5678',
+    '#default_value' => $phone,
+  ];
+}
+
+/**
+ * Implements hook_preprocess_page.
+ */
+function simple_bootstrap_preprocess_page(&$variables) {
+  if ($phone = theme_get_setting('phone')) {
+    $variables['contact_info']['phone'] = $phone;
+  }
+}
