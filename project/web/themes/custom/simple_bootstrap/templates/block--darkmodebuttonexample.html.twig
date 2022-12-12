@@ -35,6 +35,11 @@
 
 <ul{{ attributes.addClass(classes) }}>
   <li class="nav-item">
-    <a class="nav-link dark-mode">{{ content.field_button_title }}</a>
+    {% set button_attributes = create_attribute() %}
+    {% set btn_classes = [
+      'nav-link',
+      'dark-mode',
+    ] %}
+    <a{{ button_attributes.addClass(btn_classes) }}><i class="fa-solid fa-moon me-1"></i>{{ content.field_button_title }}</a>
   </li>
 </ul>
